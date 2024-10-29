@@ -16,7 +16,7 @@ eccite <- LoadData(ds = "thp1.eccite")
 use_condaenv(condaenv = 'py36', required = TRUE)
 
 
-# Conversion of assays into Anndata. 
+# Conversion of assays into Anndata.
 assays <- c('RNA', 'GDO', 'HTO', 'ADT')
 
 for(a in assays){
@@ -24,4 +24,3 @@ for(a in assays){
   sceasy::convertFormat(eccite, from="seurat", to="anndata",
                         outFile=filename, assay=a)
 }
-

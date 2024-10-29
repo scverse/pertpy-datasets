@@ -15,6 +15,3 @@ sceasy::convertFormat(ifng, from="seurat", to="anndata", outFile='IFNG_Perturb_s
 sceasy::convertFormat(ins, from="seurat", to="anndata", outFile='INS_Perturb_seq.h5ad')
 sceasy::convertFormat(tgfb, from="seurat", to="anndata", outFile='TGFB_Perturb_seq.h5ad')
 sceasy::convertFormat(tnfa, from="seurat", to="anndata", outFile='TNFA_Perturb_seq.h5ad')
-
-
-

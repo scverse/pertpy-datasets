@@ -5,7 +5,7 @@ date: "2024-03-13"
 ---
 
 ```{python}
-import anndata 
+import anndata
 
 ifnb = anndata.read_h5ad("IFNB_Perturb_seq.h5ad")
 
@@ -47,7 +47,7 @@ ins.obs.drop('RNA_snn_res.0.9', axis=1, inplace=True)
 ins.obs.drop('seurat_clusters', axis=1, inplace=True)
 ```
 
-Now when .obs columns are the same across five objects, we concatenate them 
+Now when .obs columns are the same across five objects, we concatenate them
 with outer join:
 
 ```{python}

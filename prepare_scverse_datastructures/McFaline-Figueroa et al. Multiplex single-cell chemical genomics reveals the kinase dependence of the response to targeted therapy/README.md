@@ -1,4 +1,3 @@
-
 The link to download the dataset can be found here: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM7056149
 
 The downloaded directory contains a single RDS file that has to be loaded into your R environment. The RDS file contains a list of Seurat objects, each corresponding to a different cell line.
