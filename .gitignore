@@ -163,3 +163,4 @@ node_modules
 # lamin
 test.ipynb
 */test-perturbation
+lamin/data
