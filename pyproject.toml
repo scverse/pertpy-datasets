@@ -4,7 +4,7 @@ requires = ["hatchling"]
 
 [project]
 name = "pertpy_datasets"
-requires-python = ">=3.9"
+requires-python = ">=3.9, <=3.12"
 authors = [{name = "Lukas Heumos", email = "lukas.heumos@posteo.net"}]
 readme = "README.md"
 dynamic = ["version", "description"]
@@ -15,17 +15,16 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
 ]
-
-[tool.hatch.version]
-path = "pertpy_datasets/__init__.py"
-
-
 dependencies = [
     "cellxgene-lamin",
     "findrefs",
     "wetlab",
-    "requests"
+    "requests",
 ]
+
+[tool.hatch.version]
+path = "pertpy_datasets/__init__.py"
+
 
 [project.urls]
 Home = "https://lamin.ai/laminlabs/pertpy-datasets"
