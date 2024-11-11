@@ -22,6 +22,8 @@ path = "pertpy_datasets/__init__.py"
 
 dependencies = [
     "cellxgene-lamin",
+    "findrefs",
+    "wetlab",
     "requests"
 ]
 
