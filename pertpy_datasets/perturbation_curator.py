@@ -26,7 +26,7 @@ try:
         from lnschema_core.types import FieldAttr
 
         class PerturbationCurator(Curate):
-            """Curator flow for Perturbation data - see pertpy-datasets."""
+            """Curator flow for Perturbation data."""
 
             def __init__(
                 self,
@@ -43,11 +43,7 @@ try:
                 Args:
                     adata: Path to or AnnData object to curate against the CELLxGENE schema.
                     var_index: The registry field for mapping the ``.var`` index.
-                    categoricals: A dictionary mapping ``.obs.columns`` to a registry field.
-                        The PerturbationCurator maps against the required CELLxGENE fields and perturbation fields by default.
                     organism: The organism name. CELLxGENE restricts it to 'human' and 'mouse' and therefore so do we.
-                    defaults: Default values that are set if columns or column values are missing.
-                    extra_sources: A dictionary mapping ``.obs.columns`` to Source records.
                     verbosity: The verbosity level.
                     cxg_schema_version: The CELLxGENE schema version to curate against.
                     using_key: A reference LaminDB instance.
