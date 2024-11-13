@@ -69,9 +69,9 @@ try:
                 }
 
                 PT_SOURCES: dict[str, Record] = {
-                    "depmap_id": bt.Source.filter(name="depmap").one(),
-                    "cell_line": bt.Source.filter(name="depmap").one(),
-                    # "compound_treatments": bt.Source.filter(entity="Drug", name="chebi").first()
+                    "depmap_id": bt.Source.using(using_key).filter(name="depmap").one(),
+                    "cell_line": bt.Source.using(using_key).filter(name="depmap").one(),
+                    # "compound_treatments": bt.Source..using(using_key)filter(entity="Drug", name="chebi").first()
                 }
 
                 self.organism = organism
