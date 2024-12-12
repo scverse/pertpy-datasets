@@ -50,28 +50,25 @@ try:
                 """
                 PT_DEFAULT_VALUES = CellxGeneFields.OBS_FIELD_DEFAULTS | {
                     "cell_line": "unknown",
-                    "genetic_perturbations": "",
-                    "compound_perturbations": "",
-                    "environmental_perturbations": "",
-                    "combination_perturbations": "",
+                    "genetic_perturbation": "",
+                    "compound": "",
+                    "compound_perturbation": "",
+                    "environmental_perturbation": "",
+                    "combination_perturbation": "",
                 }
 
                 PT_CATEGORICALS = CellxGeneFields.OBS_FIELDS | {
                     "cell_line": bt.CellLine.name,
-                    "genetic_perturbations": wl.GeneticPerturbation.name,
-                    "compound_perturbations": wl.CompoundPerturbation.name,
-                    "environmental_perturbations": wl.EnvironmentalPerturbation.name,
-                    "combination_perturbations": wl.CombinationPerturbation.name,
+                    "genetic_perturbation": wl.GeneticPerturbation.name,
+                    "compound": wl.Compound.name,
+                    "compound_perturbation": wl.CompoundPerturbation.name,
+                    "environmental_perturbation": wl.EnvironmentalPerturbation.name,
+                    "combination_perturbation": wl.CombinationPerturbation.name,
                 }
 
                 PT_SOURCES: dict[str, Record] = {
-                    # "depmap_id": bt.Source.using(using_key)
-                    # .filter(name="depmap")
-                    # .first(),
                     "cell_line": bt.Source.using(using_key).filter(name="depmap").first(),
-                    # "compound": bt.Source.using(using_key)
-                    # .filter(entity="wetlab.Compound", name="chebi")
-                    # .first(),
+                    "compound": bt.Source.using(using_key).filter(entity="wetlab.Compound", name="chebi").first(),
                 }
 
                 self.organism = organism
