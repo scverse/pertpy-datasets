@@ -10,9 +10,7 @@ class _PerturbationValidatorUnavailable:
     """Curator for perturbation data."""
 
     def __init__(self):
-        raise RuntimeError(
-            "PerturbationValidator can only be instantiated if connected to a lamindb instance."
-        )
+        raise RuntimeError("PerturbationValidator can only be instantiated if connected to a lamindb instance.")
 
 
 # Nested try because django might not be installed
@@ -70,9 +68,7 @@ try:
                     # "depmap_id": bt.Source.using(using_key)
                     # .filter(name="depmap")
                     # .first(),
-                    "cell_line": bt.Source.using(using_key)
-                    .filter(name="depmap")
-                    .first(),
+                    "cell_line": bt.Source.using(using_key).filter(name="depmap").first(),
                     # "compound": bt.Source.using(using_key)
                     # .filter(entity="wetlab.Compound", name="chebi")
                     # .first(),
@@ -82,13 +78,9 @@ try:
 
                 # Set the Compound source to chebi; we don't want output if the source has already been set
                 with logger.mute():
-                    chebi_source = bt.Source.filter(
-                        entity="wetlab.Compound", name="chebi"
-                    ).first()
+                    chebi_source = bt.Source.filter(entity="wetlab.Compound", name="chebi").first()
                     if not chebi_source:
-                        wl.Compound.add_source(
-                            bt.Source.filter(entity="Drug", name="chebi").first()
-                        )
+                        wl.Compound.add_source(bt.Source.filter(entity="Drug", name="chebi").first())
 
                 super().__init__(
                     adata=adata,
