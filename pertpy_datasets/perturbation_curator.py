@@ -50,6 +50,7 @@ try:
                 """
                 PT_DEFAULT_VALUES = CellxGeneFields.OBS_FIELD_DEFAULTS | {
                     "cell_line": "unknown",
+                    "perturbation_target": "",
                     "genetic_perturbation": "",
                     "compound": "",
                     "compound_perturbation": "",
@@ -59,6 +60,7 @@ try:
 
                 PT_CATEGORICALS = CellxGeneFields.OBS_FIELDS | {
                     "cell_line": bt.CellLine.name,
+                    "perturbation_target": wl.PerturbationTarget.name,
                     "genetic_perturbation": wl.GeneticPerturbation.name,
                     "compound": wl.Compound.name,
                     "compound_perturbation": wl.CompoundPerturbation.name,
